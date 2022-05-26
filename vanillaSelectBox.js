@@ -1224,7 +1224,7 @@ vanillaSelectBox.prototype.setValue = function (values) {
                     values = [];
                     Array.prototype.slice.call(listElements).forEach(function (x) {
                         if (x.hasAttribute('data-value')) {
-                            let value = x.getAttribute('data-value');
+                            let liVal = x.getAttribute("data-value") == values ? x.getAttribute("data-value") :  '';
                             if (value !== 'all') {
                                 if (x.classList.contains('active')) {
                                     if (x.classList.contains('hidden-search') || x.classList.contains('disabled')) {
